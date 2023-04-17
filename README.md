@@ -23,7 +23,7 @@ docker pull thewation/phpupbox5
 To start the PHPUpBox container, run the following command:
 
 ```bash
-docker run -p 80000:80 thewation/phpupbox5
+docker run -p 8000:80 thewation/phpupbox5
 ```
 
 This will start the container and map port 80 on the host machine to port 80 in the container.
