@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="TestPageHandler" path="*.test" verb="*" type="System.Web.UI.PageHandlerFactory" />
+    </handlers>
+  </system.webServer>
+</configuration>
