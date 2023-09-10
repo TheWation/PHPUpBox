@@ -3,7 +3,7 @@ FROM debian:12
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y \
-        php \
+        php5 \
         apache2 \
         libpng-dev \
         libzip-dev \
