@@ -1,8 +1,7 @@
-FROM ubuntu:latest
+FROM centos:7
 
 # Install PHP 5
-RUN apt-get update && \
-    apt-get install -y php5
+RUN yum install -y php5
 
 # Set the working directory
 WORKDIR /var/www/html
