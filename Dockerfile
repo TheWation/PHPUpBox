@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:6
 
 # Install PHP 5
 RUN yum install -y php5
