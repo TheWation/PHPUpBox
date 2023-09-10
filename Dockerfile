@@ -2,7 +2,8 @@
 FROM php:5-apache
 
 # Install necessary packages
-RUN apt-get update && \
+RUN apt-get upgrade && \
+    apt-get update \
     apt-get install -y \
         libpng-dev \
         libzip-dev \
