@@ -1,11 +1,8 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Install PHP 5
-RUN apk add --no-cache php5-fpm php5-common php5-apache2
-
-# Enable PHP 5
-RUN echo "php5-fpm" >> /etc/apk/repositories
-RUN apk update
+RUN apt-get update && \
+    apt-get install -y php5
 
 # Set the working directory
 WORKDIR /var/www/html
