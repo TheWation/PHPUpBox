@@ -1,6 +1,15 @@
 # Use the official PHP image with Apache
 FROM php:8.1-apache
 
+# Install necessary packages
+RUN apt-get upgrade && \
+    apt-get update \
+    apt-get install -y \
+        libpng-dev \
+        libzip-dev \
+        git && \
+        gd zip
+
 # Set the working directory
 WORKDIR /var/www/html
 
