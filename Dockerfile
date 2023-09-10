@@ -1,16 +1,6 @@
 # Use the official PHP image with Apache
 FROM php:8.1-apache
 
-# Install necessary packages
-RUN apt-get upgrade && \
-    apt-get update \
-    apt-get install -y \
-        libpng-dev \
-        libzip-dev \
-        git && \
-    docker-php-ext-install gd zip && \
-    a2enmod rewrite
-
 # Set the working directory
 WORKDIR /var/www/html
 
