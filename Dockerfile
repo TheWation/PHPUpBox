@@ -1,10 +1,10 @@
-# Use the official PHP image with Apache
-FROM php:5-apache
+FROM debian:12
 
 # Install necessary packages
-RUN apt-get upgrade \
-    apt-get update \
+RUN apt-get update && \
     apt-get install -y \
+        php \
+        apache2 \
         libpng-dev \
         libzip-dev \
         git && \
