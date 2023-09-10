@@ -1,5 +1,5 @@
 # Use the official PHP image with Apache
-FROM php:7.4-apache
+FROM php:8.1-apache
 
 # Install necessary packages
 RUN apt-get upgrade && \
