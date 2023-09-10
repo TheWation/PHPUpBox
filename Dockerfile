@@ -2,7 +2,7 @@
 FROM php:5-apache
 
 # Install necessary packages
-RUN apt-get upgrade && \
+RUN apt-get upgrade \
     apt-get update \
     apt-get install -y \
         libpng-dev \
