@@ -1,5 +1,7 @@
 FROM debian:12
 
+RUN sudo add-apt-repository ppa:ondrej/php
+
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y \
