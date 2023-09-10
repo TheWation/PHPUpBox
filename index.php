@@ -21,9 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $file_tmp = $_FILES['file']['tmp_name'];
         $file_ext = strtolower(pathinfo($file_name, PATHINFO_EXTENSION));
 
-        if (in_array($file_ext, $disallowed_ext)) {
-            die('Disallowed file extension.');
-        }
+        // if (in_array($file_ext, $disallowed_ext)) {
+        //     die('Disallowed file extension.');
+        // }
 
         // Additional security checks can be added here, such as checking the file size or performing virus scanning.
 
