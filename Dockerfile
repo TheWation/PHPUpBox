@@ -1,5 +1,7 @@
 FROM debian:12
 
+RUN apt install software-properties-common
+
 RUN add-apt-repository ppa:ondrej/php
 
 # Install necessary packages
