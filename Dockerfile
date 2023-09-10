@@ -2,7 +2,7 @@ FROM debian:latest
 
 # Add the Ondrej PPA
 RUN apt-get update && apt-get install -y software-properties-common
-RUN sudo add-apt-repository ppa:ondrej/php
+RUN add-apt-repository ppa:ondrej/php
 
 # Install necessary packages
 RUN apt-get update && \
