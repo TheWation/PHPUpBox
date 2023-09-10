@@ -1,20 +1,11 @@
-FROM debian:latest
+FROM alpine:latest
 
-# Add the Ondrej PPA
-RUN apt-get update && apt-get install -y software-properties-common
-RUN apt-get install add-apt-repository
-RUN add-apt-repository ppa:ondrej/php
+# Install PHP 5
+RUN apk add --no-cache php5-fpm php5-common php5-apache2
 
-# Install necessary packages
-RUN apt-get update && \
-    apt-get install -y \
-        php5 \
-        apache2 \
-        libpng-dev \
-        libzip-dev \
-        git && \
-    docker-php-ext-install gd zip && \
-    a2enmod rewrite
+# Enable PHP 5
+RUN echo "php5-fpm" >> /etc/apk/repositories
+RUN apk update
 
 # Set the working directory
 WORKDIR /var/www/html
@@ -27,5 +18,5 @@ RUN chmod -R 777 /var/www/html/uploads
 # Expose port 80
 EXPOSE 80
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Set the command to run when the container starts
+CMD ["php5-fpm"]
