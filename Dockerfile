@@ -7,7 +7,7 @@ RUN apt-get upgrade && \
     apt-get install -y \
         libpng-dev \
         libzip-dev \
-        git && \
+        git \
         gd zip
 
 # Set the working directory
