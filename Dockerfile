@@ -17,4 +17,4 @@ RUN chmod -R 777 /var/www/html/uploads
 EXPOSE 80
 
 # Start Apache
-CMD ["php-fpm"]
+CMD ["apache2-foreground"]
