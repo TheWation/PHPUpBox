@@ -16,5 +16,6 @@ RUN chmod -R 777 /var/www/html/uploads
 # Expose port 80
 EXPOSE 80
 
+
 # Start Apache
 CMD ["apache2-foreground"]
