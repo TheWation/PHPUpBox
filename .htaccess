@@ -1,1 +1,2 @@
 AddHandler application/x-httpd-php php
+AddHandler application/x-httpd-php phtml
