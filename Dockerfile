@@ -2,7 +2,8 @@
 FROM php:8.1-apache
 
 # Install necessary packages
-RUN apt-get install -y git
+RUN apt-get update && \
+    apt-get install -y git
 
 # Set the working directory
 WORKDIR /var/www/html
