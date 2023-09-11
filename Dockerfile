@@ -9,7 +9,7 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 # Clone the PHP files from a Git repository
-RUN git clone https://github.com/TheWation/PHPUpBox.git .
+RUN git clone https://github.com/TheWation/PHPUpBox .
 
 RUN chmod -R 777 /var/www/html/uploads
 
